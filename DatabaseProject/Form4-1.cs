@@ -35,6 +35,7 @@ namespace DatabaseProject
             InitializeComponent();
             this.StaffName = StaffName;
             this.StaffID = StaffID;
+            
         }
 
         public Form4_1()

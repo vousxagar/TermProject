@@ -92,6 +92,7 @@
             this.passcus.Name = "passcus";
             this.passcus.Size = new System.Drawing.Size(385, 37);
             this.passcus.TabIndex = 6;
+            this.passcus.TextChanged += new System.EventHandler(this.passcus_TextChanged);
             // 
             // button2
             // 
