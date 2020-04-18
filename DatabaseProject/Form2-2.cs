@@ -75,8 +75,8 @@ namespace DatabaseProject
                 string StaffID = this.staffID.Trim();
 
 
-                Form4_1 form4_1 = new Form4_1(StaffName, StaffID);
-                form4_1.Show();
+                Form4 form4 = new Form4(StaffName, StaffID);
+                form4.Show();
             }
 
             connection.Close();

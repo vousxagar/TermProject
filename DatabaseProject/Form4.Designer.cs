@@ -31,8 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.ToolStrip1 = new System.Windows.Forms.ToolStrip();
             this.ToolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.ToolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.ToolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.ToolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.StatusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ToolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -44,9 +47,6 @@
             this.lbl_tel = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolStripStatusLabel10 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_time = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.ToolStrip1.SuspendLayout();
             this.StatusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,12 @@
             this.ToolStripButton1.Size = new System.Drawing.Size(100, 100);
             this.ToolStripButton1.Text = "Staffs";
             this.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ToolStripButton1.Click += new System.EventHandler(this.ToolStripButton1_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 103);
             // 
             // ToolStripButton5
             // 
@@ -91,6 +97,12 @@
             this.ToolStripButton5.Size = new System.Drawing.Size(100, 100);
             this.ToolStripButton5.Text = "manage";
             this.ToolStripButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ToolStripButton5.Click += new System.EventHandler(this.ToolStripButton5_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 103);
             // 
             // ToolStripButton4
             // 
@@ -103,6 +115,11 @@
             this.ToolStripButton4.Size = new System.Drawing.Size(100, 100);
             this.ToolStripButton4.Text = "Admin";
             this.ToolStripButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 103);
             // 
             // ToolStripButton6
             // 
@@ -195,21 +212,6 @@
             this.lbl_time.Name = "lbl_time";
             this.lbl_time.Size = new System.Drawing.Size(37, 20);
             this.lbl_time.Text = "xxxx";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 103);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 103);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 103);
             // 
             // Form4
             // 

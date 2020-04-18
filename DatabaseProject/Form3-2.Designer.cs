@@ -192,57 +192,62 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
+            this.checkBox2.BackColor = System.Drawing.Color.Transparent;
             this.checkBox2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(554, 265);
+            this.checkBox2.Location = new System.Drawing.Point(491, 265);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(125, 34);
             this.checkBox2.TabIndex = 42;
             this.checkBox2.Text = "Female";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.UseVisualStyleBackColor = false;
             // 
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
+            this.checkBox5.BackColor = System.Drawing.Color.Transparent;
             this.checkBox5.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox5.Location = new System.Drawing.Point(655, 334);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(113, 34);
             this.checkBox5.TabIndex = 43;
             this.checkBox5.Text = "Admin";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.UseVisualStyleBackColor = false;
             // 
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
+            this.checkBox4.BackColor = System.Drawing.Color.Transparent;
             this.checkBox4.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox4.Location = new System.Drawing.Point(491, 334);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(137, 34);
             this.checkBox4.TabIndex = 44;
             this.checkBox4.Text = "Manage";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.UseVisualStyleBackColor = false;
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
+            this.checkBox3.BackColor = System.Drawing.Color.Transparent;
             this.checkBox3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox3.Location = new System.Drawing.Point(373, 334);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(87, 34);
             this.checkBox3.TabIndex = 45;
             this.checkBox3.Text = "Staff";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.UseVisualStyleBackColor = false;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(372, 265);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(96, 34);
             this.checkBox1.TabIndex = 46;
             this.checkBox1.Text = "Male";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.UseVisualStyleBackColor = false;
             // 
             // Form3_2
             // 
