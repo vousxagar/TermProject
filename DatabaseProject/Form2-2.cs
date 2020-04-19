@@ -11,6 +11,7 @@ namespace DatabaseProject
         private string conn ="server = localhost; user id = root; password = 02032543; persistsecurityinfo=True; database=final; allowuservariables=True";
         private string staffname;
         private string staffID;
+        private string password;
      
         int i;
         
@@ -36,7 +37,7 @@ namespace DatabaseProject
                 {
                     this.staffname = rdr["StaffName"].ToString();
                     this.staffID = rdr["StaffID"].ToString();
-
+                    
 
                 }
             }
@@ -74,17 +75,11 @@ namespace DatabaseProject
                 string StaffName = this.staffname.Trim();
                 string StaffID = this.staffID.Trim();
 
-
                 Form4 form4 = new Form4(StaffName, StaffID);
                 form4.Show();
             }
-
             connection.Close();
-            
-
         }
-
-
         private void button2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("แล้วพบกันใหม่โอกาศหน้าที่ร้าน C A F É B A R ", "C A F É B A R", MessageBoxButtons.OK, MessageBoxIcon.Information);

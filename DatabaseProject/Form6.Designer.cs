@@ -50,19 +50,19 @@
             this.Label10 = new System.Windows.Forms.Label();
             this.txt_edit_id = new System.Windows.Forms.TextBox();
             this.Label11 = new System.Windows.Forms.Label();
-            this.TabPage3 = new System.Windows.Forms.TabPage();
-            this.txt_pass_con = new System.Windows.Forms.TextBox();
-            this.Label12 = new System.Windows.Forms.Label();
-            this.btn_password_confirm = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Detail = new System.Windows.Forms.DataGridViewImageColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pricee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.TabControl1.SuspendLayout();
             this.TabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_add)).BeginInit();
             this.TabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_edit)).BeginInit();
-            this.TabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -80,9 +80,8 @@
             // 
             this.TabControl1.Controls.Add(this.TabPage1);
             this.TabControl1.Controls.Add(this.TabPage2);
-            this.TabControl1.Controls.Add(this.TabPage3);
             this.TabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TabControl1.Location = new System.Drawing.Point(589, 28);
+            this.TabControl1.Location = new System.Drawing.Point(510, 28);
             this.TabControl1.Name = "TabControl1";
             this.TabControl1.SelectedIndex = 0;
             this.TabControl1.Size = new System.Drawing.Size(413, 464);
@@ -259,6 +258,7 @@
             this.btn_select_edit.TabIndex = 22;
             this.btn_select_edit.Text = "เลือกรูปภาพ";
             this.btn_select_edit.UseVisualStyleBackColor = true;
+            this.btn_select_edit.Click += new System.EventHandler(this.btn_select_edit_Click);
             // 
             // pic_edit
             // 
@@ -307,74 +307,87 @@
             this.Label11.TabIndex = 16;
             this.Label11.Text = "รหัส";
             // 
-            // TabPage3
-            // 
-            this.TabPage3.Controls.Add(this.txt_pass_con);
-            this.TabPage3.Controls.Add(this.Label12);
-            this.TabPage3.Controls.Add(this.btn_password_confirm);
-            this.TabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TabPage3.Location = new System.Drawing.Point(4, 29);
-            this.TabPage3.Name = "TabPage3";
-            this.TabPage3.Size = new System.Drawing.Size(405, 431);
-            this.TabPage3.TabIndex = 2;
-            this.TabPage3.Text = "ลบกาแฟ";
-            this.TabPage3.UseVisualStyleBackColor = true;
-            // 
-            // txt_pass_con
-            // 
-            this.txt_pass_con.Location = new System.Drawing.Point(96, 152);
-            this.txt_pass_con.Multiline = true;
-            this.txt_pass_con.Name = "txt_pass_con";
-            this.txt_pass_con.PasswordChar = '•';
-            this.txt_pass_con.Size = new System.Drawing.Size(196, 36);
-            this.txt_pass_con.TabIndex = 2;
-            // 
-            // Label12
-            // 
-            this.Label12.AutoSize = true;
-            this.Label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label12.Location = new System.Drawing.Point(61, 88);
-            this.Label12.Name = "Label12";
-            this.Label12.Size = new System.Drawing.Size(265, 32);
-            this.Label12.TabIndex = 1;
-            this.Label12.Text = "กรุณากรอก password";
-            // 
-            // btn_password_confirm
-            // 
-            this.btn_password_confirm.Location = new System.Drawing.Point(129, 217);
-            this.btn_password_confirm.Name = "btn_password_confirm";
-            this.btn_password_confirm.Size = new System.Drawing.Size(136, 52);
-            this.btn_password_confirm.TabIndex = 0;
-            this.btn_password_confirm.Text = "ยืนยันการลบ";
-            this.btn_password_confirm.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 28);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(530, 464);
-            this.dataGridView1.TabIndex = 18;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Detail,
+            this.id,
+            this.name,
+            this.pricee,
+            this.Delete});
+            this.dataGridView2.Location = new System.Drawing.Point(23, 28);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(457, 464);
+            this.dataGridView2.TabIndex = 18;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            // 
+            // Detail
+            // 
+            this.Detail.HeaderText = "Detail";
+            this.Detail.MinimumWidth = 6;
+            this.Detail.Name = "Detail";
+            this.Detail.ReadOnly = true;
+            this.Detail.Width = 150;
+            // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 50;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Name";
+            this.name.MinimumWidth = 6;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 130;
+            // 
+            // pricee
+            // 
+            this.pricee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.pricee.HeaderText = "Price";
+            this.pricee.MinimumWidth = 6;
+            this.pricee.Name = "pricee";
+            this.pricee.ReadOnly = true;
+            this.pricee.Width = 69;
+            // 
+            // Delete
+            // 
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Delete.HeaderText = "Delete";
+            this.Delete.MinimumWidth = 6;
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Width = 55;
             // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1054, 525);
+            this.ClientSize = new System.Drawing.Size(957, 525);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TabControl1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form6";
-            this.Text = "Form6";
+            this.Text = "M A N A G E";
+            this.Load += new System.EventHandler(this.Form6_Load);
             this.TabControl1.ResumeLayout(false);
             this.TabPage1.ResumeLayout(false);
             this.TabPage1.PerformLayout();
@@ -382,9 +395,7 @@
             this.TabPage2.ResumeLayout(false);
             this.TabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_edit)).EndInit();
-            this.TabPage3.ResumeLayout(false);
-            this.TabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,11 +425,12 @@
         internal System.Windows.Forms.Label Label10;
         internal System.Windows.Forms.TextBox txt_edit_id;
         internal System.Windows.Forms.Label Label11;
-        internal System.Windows.Forms.TabPage TabPage3;
-        internal System.Windows.Forms.TextBox txt_pass_con;
-        internal System.Windows.Forms.Label Label12;
-        internal System.Windows.Forms.Button btn_password_confirm;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewImageColumn Detail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pricee;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }

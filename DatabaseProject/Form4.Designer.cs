@@ -64,7 +64,7 @@
             this.ToolStripButton6});
             this.ToolStrip1.Location = new System.Drawing.Point(0, 0);
             this.ToolStrip1.Name = "ToolStrip1";
-            this.ToolStrip1.Size = new System.Drawing.Size(495, 103);
+            this.ToolStrip1.Size = new System.Drawing.Size(672, 103);
             this.ToolStrip1.TabIndex = 2;
             this.ToolStrip1.Text = "ToolStrip1";
             // 
@@ -148,7 +148,7 @@
             this.lbl_time});
             this.StatusStrip1.Location = new System.Drawing.Point(0, 514);
             this.StatusStrip1.Name = "StatusStrip1";
-            this.StatusStrip1.Size = new System.Drawing.Size(495, 26);
+            this.StatusStrip1.Size = new System.Drawing.Size(672, 26);
             this.StatusStrip1.TabIndex = 3;
             this.StatusStrip1.Text = "StatusStrip1";
             // 
@@ -217,7 +217,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 540);
+            this.ClientSize = new System.Drawing.Size(672, 540);
             this.Controls.Add(this.StatusStrip1);
             this.Controls.Add(this.ToolStrip1);
             this.Name = "Form4";
