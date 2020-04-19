@@ -71,40 +71,37 @@ namespace DatabaseProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            i = 0;
+            
             MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; password = 02032543; persistsecurityinfo=True; database=final; allowuservariables=True");
             MySqlCommand cmd = connection.CreateCommand();
             connection.Open();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from customers where CustomerID ='" + Useridcus.Text + "' and CustomerName ='" + passcus.Text + "' and CustomerTelNo ='" + telme.Text + "'  ";
+            cmd.CommandText = "INSERT INTO customers(CustomerID,CustomerName,Gender,CustomerType,CustomerTelNo) VALUES (@id,@name,@gender,@type,@telno)";
+            cmd.Parameters.AddWithValue("@id", Useridcus.Text);
+            cmd.Parameters.AddWithValue("@name", passcus.Text);
+            cmd.Parameters.AddWithValue("@gender", combogender1.Text);
+            cmd.Parameters.AddWithValue("@type", combotype.Text);
+            cmd.Parameters.AddWithValue("@telno", telme.Text);
             cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            da.Fill(dt);
+            
+          
+            MessageBox.Show("🌻🌻บันทึกสำเร็จ🌻🌻");
 
-            i = Convert.ToInt32(dt.Rows.Count.ToString());
-            if (i == 0)
-            {
-                MessageBox.Show("you have entered invalid ID and Name or TelNo ");
-            }
-
-            else
-            {
-                this.getTheName(Useridcus.Text);
-                this.Hide();
-                string CustomerName = this.customername.Trim();
-                string CustomerID = this.customerID.Trim();
-
-                
+            Useridcus.Text = "";
+            passcus.Text = "";
+            combogender1.Text = "";
+            combotype.Text = "";
+            telme.Text = "";
 
 
-                Form4_1 form4_1 = new Form4_1(customername, customerID);
-                form4_1.Show();
-            }
 
-            connection.Close();
+            Form4_1 form4_1 = new Form4_1(customername, customerID);
+            form4_1.Show();
+        }
 
-
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
