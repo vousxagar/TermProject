@@ -28,9 +28,9 @@ namespace DatabaseProject
         {
             this.Hide();
             //this.Visible = false;
-            Form2_4 form2_4 = new Form2_4();
+            Form2_2 form2_2 = new Form2_2();
             //form2_4.Visible = true;
-            form2_4.ShowDialog();
+            form2_2.ShowDialog();
         }
     }
 }
