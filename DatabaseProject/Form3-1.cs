@@ -35,7 +35,7 @@ namespace DatabaseProject
 
             MySqlConnection connection = new MySqlConnection(conn);
             connection.ConnectionString = conn;
-            String query = "SELECT CustomerName, CustomerID FROM customers WHERE CustomerID = '" + Useridcus.Text + "'";
+            String query = "SELECT CustomerName, CustomersID FROM customers WHERE CustomersID = '" + Useridcus.Text + "'";
 
             try
             {
@@ -47,7 +47,7 @@ namespace DatabaseProject
                 if (rdr.Read())
                 {
                     this.customername = rdr["CustomerName"].ToString();
-                    this.customerID = rdr["CustomerID"].ToString();
+                    this.customerID = rdr["CustomersID"].ToString();
                     this.customerTelNo = rdr["CustomerTelNo"].ToString();
 
 
@@ -76,7 +76,7 @@ namespace DatabaseProject
             MySqlCommand cmd = connection.CreateCommand();
             connection.Open();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO customers(CustomerID,CustomerName,Gender,CustomerType,CustomerTelNo) VALUES (@id,@name,@gender,@type,@telno)";
+            cmd.CommandText = "INSERT INTO customers(CustomersID,CustomerName,Gender,CustomerType,CustomerTelNo) VALUES (@id,@name,@gender,@type,@telno)";
             cmd.Parameters.AddWithValue("@id", Useridcus.Text);
             cmd.Parameters.AddWithValue("@name", passcus.Text);
             cmd.Parameters.AddWithValue("@gender", combogender1.Text);

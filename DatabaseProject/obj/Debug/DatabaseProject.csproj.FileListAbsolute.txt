@@ -131,3 +131,4 @@ C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProj
 C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.csproj.CopyComplete
 C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.exe
 C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.pdb
+D:\final\TermProject\DatabaseProject\obj\Debug\DatabaseProject.Form8.resources
