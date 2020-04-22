@@ -89,8 +89,8 @@ namespace DatabaseProject
         private void button3_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            Form2_4 form2_4 = new Form2_4();
-            form2_4.Visible = true;
+            Form1 form1 = new Form1();
+            form1.Visible = true;
         }
 
       

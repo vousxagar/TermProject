@@ -44,9 +44,7 @@ namespace DatabaseProject
 
         private void ToolStripButton1_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            Form5 form5 = new Form5();
-            form5.Visible = true;
+            
         }
     }
 

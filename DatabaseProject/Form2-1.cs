@@ -32,7 +32,7 @@ namespace DatabaseProject
         }
         private string conn = "server = localhost; user id = root; password = 02032543; persistsecurityinfo=True; database=final; allowuservariables=True";
         private string customername;
-        private string customerID;
+        private int customerID;
 
         int i;
         private void getTheName(String username)
@@ -51,7 +51,7 @@ namespace DatabaseProject
                 if (rdr.Read())
                 {
                     this.customername = rdr["CustomerName"].ToString();
-                    this.customerID = rdr["CustomerID"].ToString();
+                    this.customerID = Convert.ToInt32(rdr["CustomerID"]);
 
 
                 }
@@ -71,7 +71,7 @@ namespace DatabaseProject
             MySqlCommand cmd = connection.CreateCommand();
             connection.Open();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from customers where CustomerID ='" + Useridcus.Text + "' and CustomerName ='" + passcus.Text + "'";
+            cmd.CommandText = "select * from customers where CustomersID ='" + Useridcus.Text + "' and CustomerName ='" + passcus.Text + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
@@ -87,12 +87,12 @@ namespace DatabaseProject
             {
                 this.getTheName(Useridcus.Text);
                 this.Hide();
-                string CustomerName = this.customername.Trim();
-                string CustomerID = this.customerID.Trim();
+                //string CustomerName = this.customername.Trim();
+                //string CustomersID = this.customerID.Trim();
 
 
-                Form4_1 form4_1 = new Form4_1(customername, customerID);
-                form4_1.Show();
+                Form5 form5 = new Form5(customerID);
+                form5.Show();
             }
 
             connection.Close();

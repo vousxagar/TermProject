@@ -27,9 +27,7 @@ namespace DatabaseProject
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //this.Visible = false;
             Form2_2 form2_2 = new Form2_2();
-            //form2_4.Visible = true;
             form2_2.ShowDialog();
         }
     }

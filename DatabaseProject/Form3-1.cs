@@ -95,8 +95,8 @@ namespace DatabaseProject
 
 
 
-            Form4_1 form4_1 = new Form4_1(customername, customerID);
-            form4_1.Show();
+            Form2_3 form2_3 = new Form2_3();
+            form2_3.Show();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -87,14 +87,10 @@ D:\final\TermProject\DatabaseProject\obj\Debug\DatabaseProject.Form1.resources
 D:\final\TermProject\DatabaseProject\obj\Debug\DatabaseProject.Form2.resources
 D:\final\TermProject\DatabaseProject\obj\Debug\DatabaseProject.Form2_2.resources
 D:\final\TermProject\DatabaseProject\obj\Debug\DatabaseProject.Form2_3.resources
-D:\final\TermProject\DatabaseProject\obj\Debug\DatabaseProject.Form2_4.resources
 D:\final\TermProject\DatabaseProject\obj\Debug\DatabaseProject.Form3.resources
-D:\final\TermProject\DatabaseProject\obj\Debug\DatabaseProject.Form3_2.resources
-D:\final\TermProject\DatabaseProject\obj\Debug\DatabaseProject.Form4_1.resources
 D:\final\TermProject\DatabaseProject\obj\Debug\DatabaseProject.Form4.resources
 D:\final\TermProject\DatabaseProject\obj\Debug\DatabaseProject.Form5.resources
 D:\final\TermProject\DatabaseProject\obj\Debug\DatabaseProject.Form6.resources
-D:\final\TermProject\DatabaseProject\obj\Debug\DatabaseProject.Form7.resources
 D:\final\TermProject\DatabaseProject\obj\Debug\DatabaseProject.Properties.Resources.resources
 D:\final\TermProject\DatabaseProject\obj\Debug\DatabaseProject.csproj.GenerateResource.cache
 D:\final\TermProject\DatabaseProject\obj\Debug\DatabaseProject.csproj.CoreCompileInputs.cache
@@ -131,7 +127,6 @@ C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProj
 C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.csproj.CopyComplete
 C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.exe
 C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.pdb
-D:\final\TermProject\DatabaseProject\obj\Debug\DatabaseProject.Form8.resources
 C:\Users\Giant333\Documents\TermProject\TermProject\DatabaseProject\bin\Debug\DatabaseProject.exe.config
 C:\Users\Giant333\Documents\TermProject\TermProject\DatabaseProject\bin\Debug\DatabaseProject.exe
 C:\Users\Giant333\Documents\TermProject\TermProject\DatabaseProject\bin\Debug\DatabaseProject.pdb
