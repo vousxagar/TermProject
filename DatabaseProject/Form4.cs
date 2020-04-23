@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,14 +38,46 @@ namespace DatabaseProject
 
         private void ToolStripButton5_Click(object sender, EventArgs e)
         {
-            this.Visible = false;
-            Form6 form6 = new Form6(StaffName,StaffID);
-            form6.Visible = true;
+            
         }
 
         private void ToolStripButton1_Click(object sender, EventArgs e)
         {
-            
+            this.Visible = false;
+            Form6 form6 = new Form6(StaffName, StaffID);
+            form6.Visible = true;
+        }
+
+        private void ToolStripButton6_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("คุณต้องการออกจากระบบหรือไม่", " C A F É B A R", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            this.Visible = false;
+            Form2_2 form2_2 = new Form2_2();
+            form2_2.Visible = true;
+        }
+        string StaffCode = string.Empty;
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+            MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; password = 02032543; persistsecurityinfo=True; database=final; allowuservariables=True");
+            MySqlCommand command = new MySqlCommand("select StaffName, StaffCode from staffs where StaffID = '" + StaffID + "'", connection);
+            connection.Open();
+
+            MySqlDataReader reader = command.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    StaffName = reader.GetString(0);
+                    StaffCode = reader.GetString(1);
+                }
+            }
+            reader.Close();
+            lbl_time.Text = DateTime.Now.ToString();
+            lbl_fullname.Text = StaffName;
+            lbl_code.Text = StaffCode;
+            lbl_username.Text = StaffID;
         }
     }
 

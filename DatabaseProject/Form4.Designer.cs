@@ -44,7 +44,7 @@
             this.ToolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_fullname = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lbl_tel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lbl_code = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolStripStatusLabel10 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_time = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolStrip1.SuspendLayout();
@@ -132,6 +132,7 @@
             this.ToolStripButton6.Size = new System.Drawing.Size(100, 100);
             this.ToolStripButton6.Text = "Logout";
             this.ToolStripButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ToolStripButton6.Click += new System.EventHandler(this.ToolStripButton6_Click);
             // 
             // StatusStrip1
             // 
@@ -143,7 +144,7 @@
             this.ToolStripStatusLabel4,
             this.lbl_fullname,
             this.ToolStripStatusLabel5,
-            this.lbl_tel,
+            this.lbl_code,
             this.ToolStripStatusLabel10,
             this.lbl_time});
             this.StatusStrip1.Location = new System.Drawing.Point(0, 514);
@@ -192,12 +193,12 @@
             this.ToolStripStatusLabel5.Size = new System.Drawing.Size(49, 20);
             this.ToolStripStatusLabel5.Text = "code :";
             // 
-            // lbl_tel
+            // lbl_code
             // 
-            this.lbl_tel.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lbl_tel.Name = "lbl_tel";
-            this.lbl_tel.Size = new System.Drawing.Size(37, 20);
-            this.lbl_tel.Text = "xxxx";
+            this.lbl_code.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.lbl_code.Name = "lbl_code";
+            this.lbl_code.Size = new System.Drawing.Size(37, 20);
+            this.lbl_code.Text = "xxxx";
             // 
             // ToolStripStatusLabel10
             // 
@@ -222,6 +223,7 @@
             this.Controls.Add(this.ToolStrip1);
             this.Name = "Form4";
             this.Text = "S T A F F S";
+            this.Load += new System.EventHandler(this.Form4_Load);
             this.ToolStrip1.ResumeLayout(false);
             this.ToolStrip1.PerformLayout();
             this.StatusStrip1.ResumeLayout(false);
@@ -245,7 +247,7 @@
         internal System.Windows.Forms.ToolStripStatusLabel ToolStripStatusLabel4;
         internal System.Windows.Forms.ToolStripStatusLabel lbl_fullname;
         internal System.Windows.Forms.ToolStripStatusLabel ToolStripStatusLabel5;
-        internal System.Windows.Forms.ToolStripStatusLabel lbl_tel;
+        internal System.Windows.Forms.ToolStripStatusLabel lbl_code;
         internal System.Windows.Forms.ToolStripStatusLabel ToolStripStatusLabel10;
         internal System.Windows.Forms.ToolStripStatusLabel lbl_time;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;

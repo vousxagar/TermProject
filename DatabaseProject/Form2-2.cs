@@ -65,7 +65,7 @@ namespace DatabaseProject
             i = Convert.ToInt32(dt.Rows.Count.ToString());
             if (i == 0)
             {
-                MessageBox.Show("you have entered invalid ID or Password");
+                MessageBox.Show("ID หรือ Password ไม่ถูกต้อง กรุณากรอกใหม่", "C A F É B A R", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             else
