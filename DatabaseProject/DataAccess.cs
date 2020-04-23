@@ -224,43 +224,9 @@ namespace DatabaseProject
             }
 
 
-        public bool RecordSale_detail(ArrayList ProductsLists)
-        {
-            using (MySqlConnection connection = new MySqlConnection(ConnectionString))
-            {
-                connection.Open();
 
-                /*Start a local transaction*/
-                MySqlTransaction sqlTran = connection.BeginTransaction();
-
-                /*Enlist a command in the current transaction*/
-                MySqlCommand command = connection.CreateCommand();
-                command.Transaction = sqlTran;
-
-
-                int SaleID = ReturnSaleID();
-                foreach (Details ProductDetail in ProductsLists)
-                {
-
-
-                    command.CommandText = "Insert into sale_details (ProductID, Price, Quantity, SaleID) values (@ProductID, @ProductPrice, @ProductQuantity, @SaleID)";
-                    //// Execute separate commands.
-                    command.Parameters.AddWithValue("@ProductID", ProductDetail.ID);
-                    command.Parameters.AddWithValue("@ProductPrice", ProductDetail.Price);
-                    command.Parameters.AddWithValue("@ProductQuantity", ProductDetail.Quantity);
-                    command.Parameters.AddWithValue("@SaleID", SaleID);
-                    command.ExecuteNonQuery();
-
-                }
-                sqlTran.Commit();
-
-                connection.Close();
-
-                return true;
-            }
-        }
         
-        public bool RecordASale(ArrayList ProductsList, DateTime SaleTime, int StaffID, decimal TotalBill, int CustomerID)
+        public bool RecordASale(DateTime SaleTime, int StaffID, decimal TotalBill, int CustomerID)
             {
                 
 
@@ -275,45 +241,45 @@ namespace DatabaseProject
                     MySqlCommand command = connection.CreateCommand();
                     command.Transaction = sqlTran;
 
-                    try
-                    {
-                        // Execute separate commands.
+                   try
+                   {
+
+                            //// Execute separate commands.
+                            command.Parameters.AddWithValue("@SaleDateTime", SaleTime);
+                            command.Parameters.AddWithValue("@CustomerID", CustomerID);
+                            command.Parameters.AddWithValue("@StaffID", StaffID);
+                            command.Parameters.AddWithValue("@GrandTotal", TotalBill);
+                            command.CommandText = "Insert into sales (SaleDateTime, CustomerID, StaffID,GrandTotal ) values (@SaleDateTime, @CustomerID, @StaffID, @GrandTotal)";
+                            command.ExecuteNonQuery();
+
+                    sqlTran.Commit();
+                    connection.Close();
+
+                }
 
 
-                    command.CommandText ="Insert into sales (SaleDateTime, StaffID, GrandTotal, CustomerID) values (@SaleTime, @SalesmanID, @TotalBill, @CustomerID)";
-                    command.Parameters.AddWithValue("@SaleTime", SaleTime);
-                    command.Parameters.AddWithValue("@SalesmanID", StaffID);
-                    command.Parameters.AddWithValue("@TotalBill", TotalBill);
-                    command.Parameters.AddWithValue("@CustomerID", CustomerID);
-                    command.ExecuteNonQuery();
-
-                        
-                
-
-                // Commit the transaction.
-                sqlTran.Commit();
-
-                        connection.Close();
-
-                        return true;
-                    }
                     catch (Exception ee)
                     {
                         connection.Close();
                         return false;
                     }
-                }
+
+
+
+
+                return true;
+            }
             }
 
             public int ReturnSaleID()
             {
-                int SaleID = 1;
+                int SaleID = 0;
                 try
                 {
 
                     using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                     {
-                        MySqlCommand command = new MySqlCommand("SELECT MAX(ID) FROM Sales;", connection);
+                        MySqlCommand command = new MySqlCommand("SELECT SaleID FROM Sales;", connection);
                         connection.Open();
 
                         MySqlDataReader reader = command.ExecuteReader();
@@ -326,8 +292,6 @@ namespace DatabaseProject
                             }
                         }
                         reader.Close();
-
-                        SaleID = SaleID + 1;
 
                         return SaleID;
                     }

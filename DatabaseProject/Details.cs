@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DatabaseProject
 {
@@ -19,6 +15,5 @@ namespace DatabaseProject
 
         public int SaleID;
         public DateTime SaleTime;
-        public int SalesmanID;
     }
 }

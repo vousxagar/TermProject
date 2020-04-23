@@ -15,6 +15,8 @@ namespace DatabaseProject
 {
     public partial class Form5 : Form
     {
+
+        string ConnectionString = "server = localhost; user id = root; password = 02032543; persistsecurityinfo=True; database = final; allowuservariables=True";
         public string ReturnUserName(int CustomerID)
         {
             MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; password = 02032543; persistsecurityinfo=True; database=final; allowuservariables=True");
@@ -106,7 +108,26 @@ namespace DatabaseProject
             }
         }
 
-        ArrayList ProductsList = new ArrayList();
+        int ProductID1 = 0;
+        decimal ProductPrice1 = 0;
+        int ProductQuantity1;
+        string Name1 = string.Empty;
+
+        int ProductID2 = 0;
+        decimal ProductPrice2 = 0;
+        int ProductQuantity2;
+        string Name2 = string.Empty;
+
+        /*int ProductID3 = 0;
+        decimal ProductPrice3 = 0;
+        int ProductQuantity3;
+        string Name3 = string.Empty;
+
+        int ProductID4 = 0;
+        decimal ProductPrice4 = 0;
+        int ProductQuantity4;
+        string Name4 = string.Empty;*/
+
 
         void ProductButton_Click(object sender, EventArgs e)
         {
@@ -118,11 +139,18 @@ namespace DatabaseProject
 
             Details ProductDetails = _DataAccess.RetreiveProductDetails(ProductID);
 
+            if (ProductID1 == 0)
+            {
+                ProductID1 = ProductID;
+            }
+
             if (CheckProductAlreadyAdded(ProductID))
             {
+
                 // MessageBox.Show("Product Alraedy Exists in Datagrid view at Index : " + RowIndex);
                 int Quantity = Convert.ToInt32(ProductsGridView.Rows[RowIndex].Cells["ProductQuantityColumn"].Value);
                 decimal Price = Convert.ToInt32(ProductsGridView.Rows[RowIndex].Cells["ProductPriceColumn"].Value);
+
 
                 Quantity++;
 
@@ -131,8 +159,8 @@ namespace DatabaseProject
 
                 ProductsGridView.Rows[RowIndex].Cells["ProductQuantityColumn"].Value = Quantity;
                 ProductsGridView.Rows[RowIndex].Cells["TotalPriceColumn"].Value = TotalPrice;
+                TotalBillBox.Text = CalculateTotalBill(ProductsGridView).ToString();
 
-                
 
             }
             else
@@ -140,19 +168,43 @@ namespace DatabaseProject
                 ProductsGridView.Rows.Add(ProductID, ProductDetails.Name, ProductDetails.Price, 1, ProductDetails.Price * 1);
                 TotalBillBox.Text = CalculateTotalBill(ProductsGridView).ToString();
 
+            }
 
+            if(ProductID1 == ProductID)
+            {
                 foreach (DataGridViewRow Row in ProductsGridView.Rows)
                 {
-                    int ProductIDs = Convert.ToInt32(Row.Cells["ProductIDColumn"].Value);
-                    string ProductName = Convert.ToString(Row.Cells["ProductNameColumn"].Value);
-                    decimal ProductPrice = Convert.ToDecimal(Row.Cells["ProductPriceColumn"].Value);
-                    int ProductQuantity = Convert.ToInt32(Row.Cells["ProductQuantityColumn"].Value);
-                    decimal ProductTotal = Convert.ToDecimal(Row.Cells["TotalPriceColumn"].Value);
-
-                    ProductsList.Add(new Details() { Name = ProductName, ID = ProductIDs, Price = ProductPrice, Quantity = ProductQuantity, Total = ProductTotal });
+                    ProductPrice1 = Convert.ToDecimal(Row.Cells["ProductPriceColumn"].Value);
+                    ProductQuantity1 = Convert.ToInt32(Row.Cells["ProductQuantityColumn"].Value);
                 }
-
             }
+            else
+            {
+                foreach (DataGridViewRow Row in ProductsGridView.Rows)
+                {
+                    ProductID2 = Convert.ToInt32(Row.Cells["ProductIDColumn"].Value);
+                    ProductPrice2 = Convert.ToDecimal(Row.Cells["ProductPriceColumn"].Value);
+                    ProductQuantity2 = Convert.ToInt32(Row.Cells["ProductQuantityColumn"].Value);
+                }
+            }
+
+            
+                /*if (CheckProductAlreadyAdded(ProductID2))
+                {
+                ProductID3 = Convert.ToInt32(ProductsGridView.Rows[RowIndex].Cells["ProductIDColumn"].Value);
+                ProductPrice3 = Convert.ToDecimal(ProductsGridView.Rows[RowIndex].Cells["ProductPriceColumn"].Value);
+                ProductQuantity3 = Convert.ToInt32(ProductsGridView.Rows[RowIndex].Cells["ProductQuantityColumn"].Value);
+                ProductQuantity3++;
+                 }
+                else
+                {
+                ProductID4 = Convert.ToInt32(ProductsGridView.Rows[RowIndex].Cells["ProductIDColumn"].Value);
+                ProductPrice4 = Convert.ToDecimal(ProductsGridView.Rows[RowIndex].Cells["ProductPriceColumn"].Value);
+                ProductQuantity4 = Convert.ToInt32(ProductsGridView.Rows[RowIndex].Cells["ProductQuantityColumn"].Value);
+                ProductQuantity4++;
+                 }*/
+
+            
 
         }
 
@@ -200,8 +252,8 @@ namespace DatabaseProject
                     ProductsGridView.Rows.RemoveAt((e.RowIndex));
                     MessageBox.Show("ลบสำเร็จ!", " C A F É B A R", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                    
-             }
+
+            }
         }
 
         private void buy_button_Click(object sender, EventArgs e)
@@ -219,32 +271,148 @@ namespace DatabaseProject
                     int ID = reader.GetInt32(0);
                     num += 1;
                 }
+                num++;
             }
             reader.Close();
             Random random = new Random();
-            int StaffID = random.Next(num);
+            int StaffID = random.Next(1,num);
             DataAccess dataAccess = new DataAccess();
 
-
             
-            if (dataAccess.RecordASale(ProductsList, DateTime.Now, StaffID, CalculateTotalBill(ProductsGridView), customerid))
-            {
-                dataAccess.RecordSale_detail(ProductsList);
+            if (dataAccess.RecordASale(DateTime.Now, StaffID, CalculateTotalBill(ProductsGridView), customerid))
+             {
+                RecordSale_detail1(ProductID1, ProductPrice1, ProductQuantity1);
+                ProductID1 = 0;
+                ProductPrice1 = 0;
+                ProductQuantity1 = 0;
+                RecordSale_detail2(ProductID2, ProductPrice2, ProductQuantity2);
+                ProductID2 = 0;
+                ProductPrice2 = 0;
+                ProductQuantity2 = 0;
+                /*RecordSale_detail3(ProductID3, ProductPrice3, ProductQuantity3);
+                ProductID3 = 0;
+                ProductPrice3 = 0;
+                ProductQuantity3 = 0;
+                RecordSale_detail4(ProductID4, ProductPrice4, ProductQuantity4);
+                ProductID4 = 0;
+                ProductPrice4 = 0;
+                ProductQuantity4 = 0;*/
                 MessageBox.Show("ขอบคุณที่ใช้บริการค่ะ", "Cafe Name!", MessageBoxButtons.OK);
+                TotalBillBox.Text = string.Empty;
+                ProductsGridView.Rows.Clear();
             }
-            else
-            {
-                MessageBox.Show("การซื้อสินค้าล้มเหลว ขออภัยในความไม่สะดวกค่ะ", "Cafe_name!", MessageBoxButtons.OK);
-            }
+             else
+             {
+                 MessageBox.Show("การซื้อสินค้าล้มเหลว ขออภัยในความไม่สะดวกค่ะ", "Cafe_name!", MessageBoxButtons.OK);
+             }
         }
 
         private void ProductsFlowPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        private bool RecordSale_detail1(int ProductID1, decimal ProductPrice1, int ProductQuantity1)
+        {
+
+            DataAccess dataAccess = new DataAccess();
+            int SaleID = dataAccess.ReturnSaleID();
+            if (ProductID1 != 0)
+            {
+                MySqlConnection connection = new MySqlConnection(ConnectionString);
+                connection.Open();
+                /*Start a local transaction*/
+                MySqlTransaction sqlTran = connection.BeginTransaction();
+                /*Enlist a command in the current transaction*/
+                MySqlCommand command = connection.CreateCommand();
+                command.Transaction = sqlTran;
+                command.Parameters.AddWithValue("@ProductID1", ProductID1);
+                command.Parameters.AddWithValue("@ProductPrice1", ProductPrice1);
+                command.Parameters.AddWithValue("@ProductQuantity1", ProductQuantity1);
+                command.Parameters.AddWithValue("@SaleID", SaleID);
+                command.CommandText = "Insert into sale_details (SaleID,ProductID, Price, Quantity) values (@SaleID, @ProductID1, @ProductPrice1, @ProductQuantity1)";
+                command.ExecuteNonQuery();
+                sqlTran.Commit();
+                connection.Close();
+                // MessageBox.Show("Add datail 1");
+
+            }
+            return true;
+        }
+        private bool RecordSale_detail2(int ProductID2, decimal ProductPrice2, int ProductQuantity2)
+        {
+            DataAccess dataAccess = new DataAccess();
+            int SaleID = dataAccess.ReturnSaleID();
+            if (ProductID2 != 0)
+            {
+                MySqlConnection connection = new MySqlConnection(ConnectionString);
+                connection.Open();
+                MySqlTransaction sqlTran1 = connection.BeginTransaction();
+                /*Enlist a command in the current transaction*/
+                MySqlCommand command1 = connection.CreateCommand();
+                command1.Transaction = sqlTran1;
+
+                command1.Parameters.AddWithValue("@ProductID2", ProductID2);
+                command1.Parameters.AddWithValue("@ProductPrice2", ProductPrice2);
+                command1.Parameters.AddWithValue("@ProductQuantity2", ProductQuantity2);
+                command1.Parameters.AddWithValue("@SaleID", SaleID);
+                command1.CommandText = "Insert into sale_details (SaleID,ProductID, Price, Quantity) values (@SaleID, @ProductID2, @ProductPrice2, @ProductQuantity2)";
+                command1.ExecuteNonQuery();
+                sqlTran1.Commit();
+                connection.Close();
+                //MessageBox.Show("Add detail 2");
+            }
+            return true;
+        }
+       /* private bool RecordSale_detail3(int ProductID3, decimal ProductPrice3, int ProductQuantity3)
+        {
+            DataAccess dataAccess = new DataAccess();
+            int SaleID = dataAccess.ReturnSaleID();
+            if (ProductPrice3 != 0)
+            {
+                MySqlConnection connection = new MySqlConnection(ConnectionString);
+                connection.Open();
+                MySqlTransaction sqlTran2 = connection.BeginTransaction();
+                //Enlist a command in the current transaction
+                MySqlCommand command2 = connection.CreateCommand();
+                command2.Transaction = sqlTran2;
+
+                command2.Parameters.AddWithValue("@ProductID3", ProductID3);
+                command2.Parameters.AddWithValue("@ProductPrice3", ProductPrice3);
+                command2.Parameters.AddWithValue("@ProductQuantity3", ProductQuantity3);
+                command2.Parameters.AddWithValue("@SaleID", SaleID);
+                command2.CommandText = "Insert into sale_details (SaleID,ProductID, Price, Quantity) values (@SaleID, @ProductID3, @ProductPrice3, @ProductQuantity3)";
+                command2.ExecuteNonQuery();
+                sqlTran2.Commit();
+                connection.Close();
+            }
+            return true;
+        }
+        private bool RecordSale_detail4(int ProductID4, decimal ProductPrice4, int ProductQuantity4)
+        {
+            DataAccess dataAccess = new DataAccess();
+            int SaleID = dataAccess.ReturnSaleID();
+            if (ProductPrice4 != 0)
+            {
+                MySqlConnection connection = new MySqlConnection(ConnectionString);
+                connection.Open();
+                MySqlTransaction sqlTran3 = connection.BeginTransaction();
+                //Enlist a command in the current transaction
+                MySqlCommand command3 = connection.CreateCommand();
+                command3.Transaction = sqlTran3;
+                command3.Parameters.AddWithValue("@ProductID4", ProductID4);
+                command3.Parameters.AddWithValue("@ProductPrice4", ProductPrice4);
+                command3.Parameters.AddWithValue("@ProductQuantity4", ProductQuantity4);
+                command3.Parameters.AddWithValue("@SaleID", SaleID);
+                command3.CommandText = "Insert into sale_details (SaleID,ProductID, Price, Quantity) values (@SaleID, @ProductID4, @ProductPrice4, @ProductQuantity4)";
+                command3.ExecuteNonQuery();
+                sqlTran3.Commit();
+                connection.Close();
+            }
+            return true;
+        }*/
     }
 }
-
    
 
 

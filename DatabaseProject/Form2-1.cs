@@ -51,7 +51,7 @@ namespace DatabaseProject
                 if (rdr.Read())
                 {
                     this.customername = rdr["CustomerName"].ToString();
-                    this.customerID = Convert.ToInt32(rdr["CustomerID"]);
+
 
 
                 }
@@ -90,7 +90,7 @@ namespace DatabaseProject
                 //string CustomerName = this.customername.Trim();
                 //string CustomersID = this.customerID.Trim();
 
-
+                this.customerID = Convert.ToInt32(Useridcus.Text);
                 Form5 form5 = new Form5(customerID);
                 form5.Show();
             }
