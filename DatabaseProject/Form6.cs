@@ -325,6 +325,13 @@ namespace DatabaseProject
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Form4 form4 = new Form4();
+            form4.Visible = true;
+        }
     }
 }
 

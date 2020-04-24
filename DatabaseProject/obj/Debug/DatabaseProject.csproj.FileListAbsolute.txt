@@ -184,3 +184,4 @@ C:\Users\Giant333\Documents\TermProject3\TermProject\DatabaseProject\obj\Debug\D
 C:\Users\Giant333\Documents\TermProject3\TermProject\DatabaseProject\obj\Debug\DatabaseProject.csproj.CopyComplete
 C:\Users\Giant333\Documents\TermProject3\TermProject\DatabaseProject\obj\Debug\DatabaseProject.exe
 C:\Users\Giant333\Documents\TermProject3\TermProject\DatabaseProject\obj\Debug\DatabaseProject.pdb
+C:\Users\Giant333\Documents\TermProject3\TermProject\DatabaseProject\obj\Debug\DatabaseProject.Form9.resources

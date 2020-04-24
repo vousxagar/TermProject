@@ -111,7 +111,7 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button3.Font = new System.Drawing.Font("OCR A Extended", 27.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(80, 270);
+            this.button3.Location = new System.Drawing.Point(85, 238);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(204, 71);
             this.button3.TabIndex = 7;

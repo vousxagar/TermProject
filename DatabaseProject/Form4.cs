@@ -81,6 +81,13 @@ namespace DatabaseProject
             lbl_code.Text = StaffCode;
             lbl_username.Text = StaffID;
         }
+
+        private void ToolStripButton4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form9 form9 = new Form9();
+            form9.ShowDialog();
+        }
     }
 
 }

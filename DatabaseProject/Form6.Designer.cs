@@ -57,6 +57,7 @@
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pricee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.button1 = new System.Windows.Forms.Button();
             this.TabControl1.SuspendLayout();
             this.TabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_add)).BeginInit();
@@ -83,7 +84,7 @@
             this.TabControl1.Controls.Add(this.TabPage2);
             this.TabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabControl1.Location = new System.Drawing.Point(382, 23);
-            this.TabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.TabControl1.Name = "TabControl1";
             this.TabControl1.SelectedIndex = 0;
             this.TabControl1.Size = new System.Drawing.Size(310, 377);
@@ -102,9 +103,9 @@
             this.TabPage1.Controls.Add(this.Label2);
             this.TabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabPage1.Location = new System.Drawing.Point(4, 26);
-            this.TabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.TabPage1.Name = "TabPage1";
-            this.TabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.TabPage1.Size = new System.Drawing.Size(302, 347);
             this.TabPage1.TabIndex = 0;
             this.TabPage1.Text = "เพิ่มกาแฟ";
@@ -114,7 +115,7 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(88, 67);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(118, 19);
@@ -136,7 +137,7 @@
             this.btn_addnew.Font = new System.Drawing.Font("Angsana New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addnew.ForeColor = System.Drawing.Color.Black;
             this.btn_addnew.Location = new System.Drawing.Point(66, 304);
-            this.btn_addnew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_addnew.Margin = new System.Windows.Forms.Padding(2);
             this.btn_addnew.Name = "btn_addnew";
             this.btn_addnew.Size = new System.Drawing.Size(96, 31);
             this.btn_addnew.TabIndex = 15;
@@ -149,7 +150,7 @@
             this.btn_select_addpic.Font = new System.Drawing.Font("Angsana New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_select_addpic.ForeColor = System.Drawing.Color.Black;
             this.btn_select_addpic.Location = new System.Drawing.Point(204, 203);
-            this.btn_select_addpic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_select_addpic.Margin = new System.Windows.Forms.Padding(2);
             this.btn_select_addpic.Name = "btn_select_addpic";
             this.btn_select_addpic.Size = new System.Drawing.Size(82, 31);
             this.btn_select_addpic.TabIndex = 14;
@@ -161,7 +162,7 @@
             // 
             this.pic_add.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_add.Location = new System.Drawing.Point(31, 154);
-            this.pic_add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_add.Margin = new System.Windows.Forms.Padding(2);
             this.pic_add.Name = "pic_add";
             this.pic_add.Size = new System.Drawing.Size(162, 137);
             this.pic_add.TabIndex = 13;
@@ -171,7 +172,7 @@
             // 
             this.txt_add_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_add_name.Location = new System.Drawing.Point(88, 44);
-            this.txt_add_name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_add_name.Margin = new System.Windows.Forms.Padding(2);
             this.txt_add_name.Multiline = true;
             this.txt_add_name.Name = "txt_add_name";
             this.txt_add_name.Size = new System.Drawing.Size(118, 19);
@@ -192,7 +193,7 @@
             // 
             this.txt_add_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_add_id.Location = new System.Drawing.Point(88, 20);
-            this.txt_add_id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_add_id.Margin = new System.Windows.Forms.Padding(2);
             this.txt_add_id.Multiline = true;
             this.txt_add_id.Name = "txt_add_id";
             this.txt_add_id.Size = new System.Drawing.Size(118, 19);
@@ -222,9 +223,9 @@
             this.TabPage2.Controls.Add(this.Label11);
             this.TabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabPage2.Location = new System.Drawing.Point(4, 26);
-            this.TabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.TabPage2.Name = "TabPage2";
-            this.TabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.TabPage2.Size = new System.Drawing.Size(302, 347);
             this.TabPage2.TabIndex = 1;
             this.TabPage2.Text = "แก้ไขกาแฟ";
@@ -234,7 +235,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(85, 61);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(118, 19);
@@ -256,7 +257,7 @@
             this.btn_save_edit.Font = new System.Drawing.Font("Angsana New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_save_edit.ForeColor = System.Drawing.Color.Black;
             this.btn_save_edit.Location = new System.Drawing.Point(73, 306);
-            this.btn_save_edit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_save_edit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_save_edit.Name = "btn_save_edit";
             this.btn_save_edit.Size = new System.Drawing.Size(104, 31);
             this.btn_save_edit.TabIndex = 23;
@@ -269,7 +270,7 @@
             this.btn_select_edit.Font = new System.Drawing.Font("Angsana New", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_select_edit.ForeColor = System.Drawing.Color.Black;
             this.btn_select_edit.Location = new System.Drawing.Point(207, 202);
-            this.btn_select_edit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_select_edit.Margin = new System.Windows.Forms.Padding(2);
             this.btn_select_edit.Name = "btn_select_edit";
             this.btn_select_edit.Size = new System.Drawing.Size(82, 31);
             this.btn_select_edit.TabIndex = 22;
@@ -281,7 +282,7 @@
             // 
             this.pic_edit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pic_edit.Location = new System.Drawing.Point(33, 158);
-            this.pic_edit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_edit.Margin = new System.Windows.Forms.Padding(2);
             this.pic_edit.Name = "pic_edit";
             this.pic_edit.Size = new System.Drawing.Size(162, 137);
             this.pic_edit.TabIndex = 21;
@@ -291,7 +292,7 @@
             // 
             this.txt_edit_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_edit_name.Location = new System.Drawing.Point(85, 37);
-            this.txt_edit_name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_edit_name.Margin = new System.Windows.Forms.Padding(2);
             this.txt_edit_name.Multiline = true;
             this.txt_edit_name.Name = "txt_edit_name";
             this.txt_edit_name.Size = new System.Drawing.Size(118, 19);
@@ -312,7 +313,7 @@
             // 
             this.txt_edit_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_edit_id.Location = new System.Drawing.Point(85, 14);
-            this.txt_edit_id.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_edit_id.Margin = new System.Windows.Forms.Padding(2);
             this.txt_edit_id.Multiline = true;
             this.txt_edit_id.Name = "txt_edit_id";
             this.txt_edit_id.Size = new System.Drawing.Size(118, 19);
@@ -345,7 +346,7 @@
             this.pricee,
             this.Delete});
             this.dataGridView2.Location = new System.Drawing.Point(17, 23);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
@@ -400,16 +401,29 @@
             this.Delete.ReadOnly = true;
             this.Delete.Width = 44;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkRed;
+            this.button1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(590, 414);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 41);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 427);
+            this.ClientSize = new System.Drawing.Size(718, 467);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TabControl1);
             this.Controls.Add(this.dataGridView2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form6";
             this.Text = "M A N A G E";
             this.Load += new System.EventHandler(this.Form6_Load);
@@ -457,5 +471,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn pricee;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.Button button1;
     }
 }
