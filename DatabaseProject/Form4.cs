@@ -38,7 +38,9 @@ namespace DatabaseProject
 
         private void ToolStripButton5_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            Form7 form7 = new Form7();
+            form7.ShowDialog();
         }
 
         private void ToolStripButton1_Click(object sender, EventArgs e)

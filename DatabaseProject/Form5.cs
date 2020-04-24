@@ -364,53 +364,58 @@ namespace DatabaseProject
             }
             return true;
         }
-       /* private bool RecordSale_detail3(int ProductID3, decimal ProductPrice3, int ProductQuantity3)
-        {
-            DataAccess dataAccess = new DataAccess();
-            int SaleID = dataAccess.ReturnSaleID();
-            if (ProductPrice3 != 0)
-            {
-                MySqlConnection connection = new MySqlConnection(ConnectionString);
-                connection.Open();
-                MySqlTransaction sqlTran2 = connection.BeginTransaction();
-                //Enlist a command in the current transaction
-                MySqlCommand command2 = connection.CreateCommand();
-                command2.Transaction = sqlTran2;
 
-                command2.Parameters.AddWithValue("@ProductID3", ProductID3);
-                command2.Parameters.AddWithValue("@ProductPrice3", ProductPrice3);
-                command2.Parameters.AddWithValue("@ProductQuantity3", ProductQuantity3);
-                command2.Parameters.AddWithValue("@SaleID", SaleID);
-                command2.CommandText = "Insert into sale_details (SaleID,ProductID, Price, Quantity) values (@SaleID, @ProductID3, @ProductPrice3, @ProductQuantity3)";
-                command2.ExecuteNonQuery();
-                sqlTran2.Commit();
-                connection.Close();
-            }
-            return true;
-        }
-        private bool RecordSale_detail4(int ProductID4, decimal ProductPrice4, int ProductQuantity4)
+        private void ProductsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataAccess dataAccess = new DataAccess();
-            int SaleID = dataAccess.ReturnSaleID();
-            if (ProductPrice4 != 0)
-            {
-                MySqlConnection connection = new MySqlConnection(ConnectionString);
-                connection.Open();
-                MySqlTransaction sqlTran3 = connection.BeginTransaction();
-                //Enlist a command in the current transaction
-                MySqlCommand command3 = connection.CreateCommand();
-                command3.Transaction = sqlTran3;
-                command3.Parameters.AddWithValue("@ProductID4", ProductID4);
-                command3.Parameters.AddWithValue("@ProductPrice4", ProductPrice4);
-                command3.Parameters.AddWithValue("@ProductQuantity4", ProductQuantity4);
-                command3.Parameters.AddWithValue("@SaleID", SaleID);
-                command3.CommandText = "Insert into sale_details (SaleID,ProductID, Price, Quantity) values (@SaleID, @ProductID4, @ProductPrice4, @ProductQuantity4)";
-                command3.ExecuteNonQuery();
-                sqlTran3.Commit();
-                connection.Close();
-            }
-            return true;
-        }*/
+
+        }
+        /* private bool RecordSale_detail3(int ProductID3, decimal ProductPrice3, int ProductQuantity3)
+{
+    DataAccess dataAccess = new DataAccess();
+    int SaleID = dataAccess.ReturnSaleID();
+    if (ProductPrice3 != 0)
+    {
+        MySqlConnection connection = new MySqlConnection(ConnectionString);
+        connection.Open();
+        MySqlTransaction sqlTran2 = connection.BeginTransaction();
+        //Enlist a command in the current transaction
+        MySqlCommand command2 = connection.CreateCommand();
+        command2.Transaction = sqlTran2;
+
+        command2.Parameters.AddWithValue("@ProductID3", ProductID3);
+        command2.Parameters.AddWithValue("@ProductPrice3", ProductPrice3);
+        command2.Parameters.AddWithValue("@ProductQuantity3", ProductQuantity3);
+        command2.Parameters.AddWithValue("@SaleID", SaleID);
+        command2.CommandText = "Insert into sale_details (SaleID,ProductID, Price, Quantity) values (@SaleID, @ProductID3, @ProductPrice3, @ProductQuantity3)";
+        command2.ExecuteNonQuery();
+        sqlTran2.Commit();
+        connection.Close();
+    }
+    return true;
+}
+private bool RecordSale_detail4(int ProductID4, decimal ProductPrice4, int ProductQuantity4)
+{
+    DataAccess dataAccess = new DataAccess();
+    int SaleID = dataAccess.ReturnSaleID();
+    if (ProductPrice4 != 0)
+    {
+        MySqlConnection connection = new MySqlConnection(ConnectionString);
+        connection.Open();
+        MySqlTransaction sqlTran3 = connection.BeginTransaction();
+        //Enlist a command in the current transaction
+        MySqlCommand command3 = connection.CreateCommand();
+        command3.Transaction = sqlTran3;
+        command3.Parameters.AddWithValue("@ProductID4", ProductID4);
+        command3.Parameters.AddWithValue("@ProductPrice4", ProductPrice4);
+        command3.Parameters.AddWithValue("@ProductQuantity4", ProductQuantity4);
+        command3.Parameters.AddWithValue("@SaleID", SaleID);
+        command3.CommandText = "Insert into sale_details (SaleID,ProductID, Price, Quantity) values (@SaleID, @ProductID4, @ProductPrice4, @ProductQuantity4)";
+        command3.ExecuteNonQuery();
+        sqlTran3.Commit();
+        connection.Close();
+    }
+    return true;
+}*/
     }
 }
    

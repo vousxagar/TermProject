@@ -320,6 +320,11 @@ namespace DatabaseProject
                 textBox1.Text = Price_C;
             }
         }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 

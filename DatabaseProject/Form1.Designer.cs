@@ -49,10 +49,10 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(185, 225);
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(185, 214);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(306, 83);
+            this.button2.Size = new System.Drawing.Size(306, 74);
             this.button2.TabIndex = 1;
             this.button2.Text = "Staffs";
             this.button2.UseVisualStyleBackColor = false;
@@ -60,7 +60,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(630, 411);
