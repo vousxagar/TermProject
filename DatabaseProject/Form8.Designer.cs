@@ -34,7 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BTN_SEARCH = new System.Windows.Forms.Button();
+            this.textBoxValueToSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +100,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(367, 12);
             this.dataGridView1.Name = "dataGridView1";
@@ -106,18 +108,23 @@
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // button3
+            // BTN_SEARCH
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button3.Font = new System.Drawing.Font("OCR A Extended", 27.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(85, 238);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(204, 71);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Show";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.BTN_SEARCH.Location = new System.Drawing.Point(273, 261);
+            this.BTN_SEARCH.Name = "BTN_SEARCH";
+            this.BTN_SEARCH.Size = new System.Drawing.Size(88, 41);
+            this.BTN_SEARCH.TabIndex = 10;
+            this.BTN_SEARCH.Text = "Search";
+            this.BTN_SEARCH.UseVisualStyleBackColor = true;
+            this.BTN_SEARCH.Click += new System.EventHandler(this.BTN_SEARCH_Click);
+            // 
+            // textBoxValueToSearch
+            // 
+            this.textBoxValueToSearch.Location = new System.Drawing.Point(103, 272);
+            this.textBoxValueToSearch.Name = "textBoxValueToSearch";
+            this.textBoxValueToSearch.Size = new System.Drawing.Size(153, 20);
+            this.textBoxValueToSearch.TabIndex = 11;
+            this.textBoxValueToSearch.TextChanged += new System.EventHandler(this.textBoxValueToSearch_TextChanged);
             // 
             // Form8
             // 
@@ -125,7 +132,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DatabaseProject.Properties.Resources.coffee_983953_1920;
             this.ClientSize = new System.Drawing.Size(820, 450);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.textBoxValueToSearch);
+            this.Controls.Add(this.BTN_SEARCH);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -149,6 +157,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BTN_SEARCH;
+        private System.Windows.Forms.TextBox textBoxValueToSearch;
     }
 }

@@ -13,6 +13,8 @@ namespace DatabaseProject
 {
     public partial class Form8 : Form
     {
+        public object TextBoxValueToSearch { get; private set; }
+
         public Form8()
         {
             InitializeComponent();
@@ -37,9 +39,8 @@ namespace DatabaseProject
 
         private void Form8_Load(object sender, EventArgs e)
         {
-            
+            searchData("");
         }
-
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -58,6 +59,31 @@ namespace DatabaseProject
 
             dataGridView1.DataSource = data;
 
+        }
+
+        private void textBoxValueToSearch_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BTN_SEARCH_Click(object sender, EventArgs e)
+        {
+            string valueTOSearch = TextBoxValueToSearch.ToString();
+            searchData(valueTOSearch);
+        }
+
+        private void searchData(string valueTOSearch)
+        {
+            MySqlConnection connection = new MySqlConnection("server = localhost; user id = root; password = 02032543; persistsecurityinfo=True; database=final; allowuservariables=True");
+            MySqlCommand cmd = new MySqlCommand("SELECT SaleDateTime, CustomerID, StaffID, GrandTotal FROM sales;", connection);
+            connection.Open();
+
+            DataTable data = new DataTable();
+
+            MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
+            ad.Fill(data);
+
+            dataGridView1.DataSource = data;
         }
     }
 }
