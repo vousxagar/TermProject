@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2_3));
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -37,9 +36,10 @@
             // 
             this.button2.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(104, 190);
+            this.button2.Location = new System.Drawing.Point(102, 188);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(352, 78);
+            this.button2.Size = new System.Drawing.Size(264, 63);
             this.button2.TabIndex = 3;
             this.button2.Text = "Sign up";
             this.button2.UseVisualStyleBackColor = false;
@@ -50,9 +50,10 @@
             this.button1.BackColor = System.Drawing.Color.Thistle;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(104, 75);
+            this.button1.Location = new System.Drawing.Point(102, 78);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(352, 78);
+            this.button1.Size = new System.Drawing.Size(264, 63);
             this.button1.TabIndex = 2;
             this.button1.Text = "Sign in";
             this.button1.UseVisualStyleBackColor = false;
@@ -60,13 +61,14 @@
             // 
             // Form2_3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(623, 439);
+            this.BackgroundImage = global::DatabaseProject.Properties.Resources.coffee_983953_1920;
+            this.ClientSize = new System.Drawing.Size(467, 357);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form2_3";
             this.Text = "customers";
             this.ResumeLayout(false);

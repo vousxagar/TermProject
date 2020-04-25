@@ -153,13 +153,14 @@
             // 
             // buy_button
             // 
+            this.buy_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.buy_button.Location = new System.Drawing.Point(801, 503);
-            this.buy_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buy_button.Margin = new System.Windows.Forms.Padding(2);
             this.buy_button.Name = "buy_button";
             this.buy_button.Size = new System.Drawing.Size(105, 39);
             this.buy_button.TabIndex = 13;
             this.buy_button.Text = "สั่งซื้อ";
-            this.buy_button.UseVisualStyleBackColor = true;
+            this.buy_button.UseVisualStyleBackColor = false;
             this.buy_button.Click += new System.EventHandler(this.buy_button_Click);
             // 
             // TotalBillBox
@@ -182,13 +183,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.BackgroundImage = global::DatabaseProject.Properties.Resources.bar_1869656_19201;
             this.ClientSize = new System.Drawing.Size(916, 552);
             this.Controls.Add(this.TotalBillBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buy_button);
             this.Controls.Add(this.ProductsGroupBox);
             this.Controls.Add(this.BillGroupBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form5";
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load);

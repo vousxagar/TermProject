@@ -73,9 +73,29 @@ namespace DatabaseProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bar_1869656_19201 {
+            get {
+                object obj = ResourceManager.GetObject("bar-1869656_19201", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap coffee_2235370_1920 {
             get {
                 object obj = ResourceManager.GetObject("coffee-2235370_1920", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coffee_2235370_19201 {
+            get {
+                object obj = ResourceManager.GetObject("coffee-2235370_19201", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +136,16 @@ namespace DatabaseProject.Properties {
         internal static System.Drawing.Bitmap coffee_984328_1920 {
             get {
                 object obj = ResourceManager.GetObject("coffee-984328_1920", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coffee_984328_19201 {
+            get {
+                object obj = ResourceManager.GetObject("coffee-984328_19201", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -161,10 +161,10 @@
             // pic_add
             // 
             this.pic_add.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_add.Location = new System.Drawing.Point(31, 154);
+            this.pic_add.Location = new System.Drawing.Point(31, 129);
             this.pic_add.Margin = new System.Windows.Forms.Padding(2);
             this.pic_add.Name = "pic_add";
-            this.pic_add.Size = new System.Drawing.Size(162, 137);
+            this.pic_add.Size = new System.Drawing.Size(162, 162);
             this.pic_add.TabIndex = 13;
             this.pic_add.TabStop = false;
             // 
@@ -417,6 +417,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(718, 467);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);

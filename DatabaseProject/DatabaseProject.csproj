@@ -224,5 +224,14 @@
   <ItemGroup>
     <None Include="Resources\coffee-2235370_1920.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar-1869656_19201.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-984328_19201.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-2235370_19201.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

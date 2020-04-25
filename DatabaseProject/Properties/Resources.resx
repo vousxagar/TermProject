@@ -121,22 +121,31 @@
   <data name="coffee-983953_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coffee-983953_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="รูปภาพ2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\รูปภาพ2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="bar-1869656_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bar-1869656_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="coffee-423198_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coffee-423198_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="coffee-841425_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coffee-841425_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coffee-984328_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coffee-984328_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="coffee-2235370_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coffee-2235370_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coffee-841425_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coffee-841425_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coffee-423198_1920" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coffee-423198_1920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="รูปภาพ2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\รูปภาพ2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bar-1869656_19201" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bar-1869656_19201.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coffee-984328_19201" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coffee-984328_19201.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coffee-2235370_19201" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coffee-2235370_19201.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
