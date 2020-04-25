@@ -39,7 +39,16 @@ namespace DatabaseProject
 
         private void Form8_Load(object sender, EventArgs e)
         {
-            searchData("");
+            DataAccess _DataAccess = new DataAccess();
+
+            DateTimecomboBox.Items.Add("=====วันที่=====");
+
+            foreach (Details DateTime in _DataAccess.ReturnDateTime())
+            {
+                DateTimecomboBox.Items.Add(DateTime.SaleTime);
+            }
+
+            DateTimecomboBox.SelectedIndex = 0;
         }
         private void label2_Click(object sender, EventArgs e)
         {
@@ -57,7 +66,7 @@ namespace DatabaseProject
             MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
             ad.Fill(data);
 
-            dataGridView1.DataSource = data;
+            //dataGridView1.DataSource = data;
 
         }
 
@@ -83,7 +92,55 @@ namespace DatabaseProject
             MySqlDataAdapter ad = new MySqlDataAdapter(cmd);
             ad.Fill(data);
 
-            dataGridView1.DataSource = data;
+           // dataGridView1.DataSource = data;
+        }
+
+
+
+
+        private void DateTimecomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SalesGridView.Rows.Clear();
+
+            if (DateTimecomboBox.SelectedIndex == 0)
+            {
+                DataAccess _DataAccess = new DataAccess();
+
+                foreach (Details SaleDetails in _DataAccess.RetreiveAllSales())
+                {
+                    SalesGridView.Rows.Add(SaleDetails.SaleID, SaleDetails.SaleTime, SaleDetails.Name, SaleDetails.Total, "View Products");
+                }
+            }
+            else if (DateTimecomboBox.SelectedIndex > 0)
+            {
+                DateTime dateTime = Convert.ToDateTime(DateTimecomboBox.SelectedItem);
+
+                DataAccess _DataAccess = new DataAccess();
+
+                int SaleID = _DataAccess.ReturnSaleID(dateTime);
+
+                foreach (Details SaleDetails in _DataAccess.RetreiveAllSaleDetail(SaleID))
+                {
+                    SalesGridView.Rows.Add(SaleDetails.SaleID, SaleDetails.SaleTime, SaleDetails.Name, SaleDetails.Total, "View Products");
+                }
+            }
+        }
+
+        private void SalesGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0)
+            {
+                if (SalesGridView.Columns[e.ColumnIndex].Name == "ProductsColumn")
+                {
+                    int SaleID = Convert.ToInt32(SalesGridView.Rows[e.RowIndex].Cells["SaleIDColumn"].Value);
+
+                    SaleDetail _ViewSaleItems = new SaleDetail(SaleID);
+
+                    _ViewSaleItems.ShowDialog();
+                }
+            }
+            
         }
     }
 }

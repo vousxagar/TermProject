@@ -149,6 +149,76 @@ namespace DatabaseProject
                 }
             }
 
+        public ArrayList RetreiveAllSaleDetail(int SaleID)
+        {
+            ArrayList SaleDetail = new ArrayList();
+            using (MySqlConnection connection = new MySqlConnection(ConnectionString))
+            {
+                MySqlCommand command = new MySqlCommand("SELECT SaleDateTime, StaffID, GrandTotal FROM sales where SaleID = '" + SaleID + "';", connection);
+                connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        DateTime SaleTime = reader.GetDateTime(0);
+                        int SalesmanID = reader.GetInt32(1);
+                        string SalesmanName = ReturnUserName(SalesmanID);
+                        decimal TotalBill = reader.GetDecimal(2);
+
+                        SaleDetail.Add(new Details() { SaleID = SaleID, SaleTime = SaleTime, Name = SalesmanName, Total = TotalBill });
+                    }
+                }
+                reader.Close();
+                return SaleDetail;
+            }
+        }
+
+
+        public int ReturnSaleID(DateTime dateTime)
+        {
+            using (MySqlConnection connection = new MySqlConnection(ConnectionString))
+            {
+                MySqlCommand command = new MySqlCommand("SELECT SaleID FROM sales where SaleDateTime = @DateTime;", connection);
+                connection.Open();
+                command.Parameters.Add("@DateTime", MySqlDbType.DateTime).Value = dateTime;
+                MySqlDataReader reader = command.ExecuteReader();
+                int SaleID = 0;
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        SaleID = reader.GetInt32(0);
+                    }
+                }
+                reader.Close();
+                return SaleID;
+            }
+        }
+        public ArrayList ReturnDateTime()
+        {
+            using (MySqlConnection connection = new MySqlConnection(ConnectionString))
+            {
+                MySqlCommand command = new MySqlCommand("SELECT SaleDateTime FROM sales", connection);
+                connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+
+                ArrayList DateTime = new ArrayList();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        DateTime dateTime = reader.GetDateTime(0);
+                        DateTime.Add(new Details() { SaleTime = dateTime });
+                    }
+                }
+                reader.Close();
+
+                return DateTime;
+            }
+        }
             public int ReturnCategoryID(string CategoryName)
             {
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
@@ -504,7 +574,7 @@ namespace DatabaseProject
 
                 using (MySqlConnection connection = new MySqlConnection(ConnectionString))
                 {
-                    MySqlCommand command = new MySqlCommand("SELECT ProductID, ProductPrice, ProductQuantity, ProductTotal FROM sale_details where SaleID = '" + SaleID + "';", connection);
+                    MySqlCommand command = new MySqlCommand("SELECT ProductID, Price, Quantity FROM sale_details where SaleID = '" + SaleID + "';", connection);
                     connection.Open();
 
                     MySqlDataReader reader = command.ExecuteReader();
@@ -516,11 +586,11 @@ namespace DatabaseProject
                             string ProductID = reader.GetString(0);
                             decimal ProductPrice = reader.GetDecimal(1);
                             int ProductQuantity = reader.GetInt32(2);
-                            decimal ProductTotal = reader.GetDecimal(3);
+
 
                             string ProductName = this.ReturnProductName(ProductID);
 
-                            ProductsList.Add(new Details() { Name = ProductName, Price = ProductPrice, Quantity = ProductQuantity, Total = ProductTotal });
+                            ProductsList.Add(new Details() { Name = ProductName, Price = ProductPrice, Quantity = ProductQuantity});
                         }
                     }
                     reader.Close();
