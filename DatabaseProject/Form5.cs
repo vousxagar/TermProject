@@ -82,6 +82,8 @@ namespace DatabaseProject
             }
         }
 
+        
+
 
         private void Form5_Load(object sender, EventArgs e)
         {
@@ -100,11 +102,13 @@ namespace DatabaseProject
                 btn.Image = Image.FromStream(ms);
                 btn.Image = new Bitmap(btn.Image, btn.Size);
 
+          
                 btn.Tag = Category.ID;
-
                 ProductsFlowPanel.Controls.Add(btn);
-
                 btn.Click += ProductButton_Click;
+
+
+
             }
         }
 

@@ -14,7 +14,7 @@ using static Org.BouncyCastle.Math.EC.ECCurve;
 
 namespace DatabaseProject
 {
-    public partial class Form6 : Form
+    public partial class pic_add : Form
     {
         private string conn = "server = localhost; user id = root; password = 02032543; persistsecurityinfo=True; database=final; allowuservariables=True";
         private string productname;
@@ -27,7 +27,7 @@ namespace DatabaseProject
         byte[] Pic_C;
 
         int i;
-        public Form6()
+        public pic_add()
         {
             InitializeComponent();
         }
@@ -74,7 +74,7 @@ namespace DatabaseProject
             }
             else
             {
-                pic_add.Image = Image.FromFile(openFileDialog1.FileName);
+                pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
             }
 
         }
@@ -84,7 +84,7 @@ namespace DatabaseProject
             MySqlCommand cmd = connection.CreateCommand();
             connection.Open();
             MemoryStream ms = new MemoryStream();
-            pic_add.Image.Save(ms, pic_add.Image.RawFormat);
+            pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
             byte[] pic_addImage = ms.GetBuffer();
             ms.Close();
             cmd.CommandType = CommandType.Text;
@@ -98,7 +98,7 @@ namespace DatabaseProject
             txt_add_id.Text = "";
             txt_add_name.Text = "";
             textBox2.Text = "";
-            pic_add.Image = null;
+            pictureBox1.Image = null;
             showdatagrid();
 
         }
@@ -166,7 +166,7 @@ namespace DatabaseProject
         public string SetTextbox { get; internal set; }
 
         string StaffPassword;
-        public Form6(string StaffName, string StaffID)
+        public pic_add(string StaffName, string StaffID)
         {
             InitializeComponent();
             this.StaffName = StaffName;
@@ -331,6 +331,16 @@ namespace DatabaseProject
             this.Visible = false;
             Form4 form4 = new Form4();
             form4.Visible = true;
+        }
+
+        private void pic_add_Click(object sender, EventArgs e)
+        {
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
+        private void pic_add_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

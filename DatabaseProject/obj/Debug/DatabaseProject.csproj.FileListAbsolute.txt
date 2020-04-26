@@ -113,13 +113,9 @@ C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProj
 C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.Form2.resources
 C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.Form2_2.resources
 C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.Form2_3.resources
-C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.Form2_4.resources
 C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.Form3.resources
-C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.Form3_2.resources
-C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.Form4_1.resources
 C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.Form4.resources
 C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.Form5.resources
-C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.Form6.resources
 C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.Form7.resources
 C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.Properties.Resources.resources
 C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.csproj.GenerateResource.cache
@@ -243,3 +239,7 @@ D:\พิมพ์ว่า test\TermProject\DatabaseProject\obj\Debug\DatabaseP
 D:\พิมพ์ว่า test\TermProject\DatabaseProject\obj\Debug\DatabaseProject.exe
 D:\พิมพ์ว่า test\TermProject\DatabaseProject\obj\Debug\DatabaseProject.pdb
 D:\พิมพ์ว่า test\TermProject\DatabaseProject\obj\Debug\DatabaseProject.SaleDetail.resources
+C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.Form8.resources
+C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.Form9.resources
+C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.SaleDetail.resources
+C:\Users\ASUS\Documents\TermProjectmaster\DatabaseProject\obj\Debug\DatabaseProject.pic_add.resources
