@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.BillGroupBox = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.ProductsGridView = new System.Windows.Forms.DataGridView();
             this.ProductIDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +49,7 @@
             // 
             // BillGroupBox
             // 
+            this.BillGroupBox.Controls.Add(this.button1);
             this.BillGroupBox.Controls.Add(this.ProductsGridView);
             this.BillGroupBox.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BillGroupBox.Location = new System.Drawing.Point(13, 14);
@@ -58,6 +60,17 @@
             this.BillGroupBox.TabIndex = 11;
             this.BillGroupBox.TabStop = false;
             this.BillGroupBox.Text = "DETAIL";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(539, 542);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 41);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "BACK";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ProductsGridView
             // 
@@ -141,7 +154,7 @@
             this.ProductsGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.ProductsGroupBox.Name = "ProductsGroupBox";
             this.ProductsGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.ProductsGroupBox.Size = new System.Drawing.Size(517, 592);
+            this.ProductsGroupBox.Size = new System.Drawing.Size(517, 535);
             this.ProductsGroupBox.TabIndex = 12;
             this.ProductsGroupBox.TabStop = false;
             this.ProductsGroupBox.Text = "MENU COFFE";
@@ -155,39 +168,43 @@
             this.ProductsFlowPanel.Location = new System.Drawing.Point(4, 29);
             this.ProductsFlowPanel.Margin = new System.Windows.Forms.Padding(4);
             this.ProductsFlowPanel.Name = "ProductsFlowPanel";
-            this.ProductsFlowPanel.Size = new System.Drawing.Size(509, 559);
+            this.ProductsFlowPanel.Size = new System.Drawing.Size(509, 502);
             this.ProductsFlowPanel.TabIndex = 0;
             this.ProductsFlowPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ProductsFlowPanel_Paint);
             // 
             // buy_button
             // 
             this.buy_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.buy_button.Location = new System.Drawing.Point(1068, 619);
+            this.buy_button.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buy_button.Location = new System.Drawing.Point(791, 619);
             this.buy_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buy_button.Name = "buy_button";
-            this.buy_button.Size = new System.Drawing.Size(140, 48);
+            this.buy_button.Size = new System.Drawing.Size(269, 48);
             this.buy_button.TabIndex = 13;
-            this.buy_button.Text = "สั่งซื้อ";
+            this.buy_button.Text = "BUY";
             this.buy_button.UseVisualStyleBackColor = false;
             this.buy_button.Click += new System.EventHandler(this.buy_button_Click);
             // 
             // TotalBillBox
             // 
-            this.TotalBillBox.Location = new System.Drawing.Point(781, 633);
+            this.TotalBillBox.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalBillBox.Location = new System.Drawing.Point(834, 570);
             this.TotalBillBox.Margin = new System.Windows.Forms.Padding(4);
+            this.TotalBillBox.Multiline = true;
             this.TotalBillBox.Name = "TotalBillBox";
-            this.TotalBillBox.Size = new System.Drawing.Size(279, 22);
+            this.TotalBillBox.Size = new System.Drawing.Size(279, 36);
             this.TotalBillBox.TabIndex = 15;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(711, 635);
+            this.label1.Font = new System.Drawing.Font("Britannic Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(732, 575);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 17);
+            this.label1.Size = new System.Drawing.Size(81, 27);
             this.label1.TabIndex = 14;
-            this.label1.Text = "ราคารวม";
+            this.label1.Text = "TOTAL";
             // 
             // Form5
             // 
@@ -195,7 +212,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.BackgroundImage = global::DatabaseProject.Properties.Resources.bar_1869656_19201;
-            this.ClientSize = new System.Drawing.Size(1221, 679);
+            this.ClientSize = new System.Drawing.Size(1237, 679);
             this.Controls.Add(this.TotalBillBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buy_button);
@@ -203,7 +220,7 @@
             this.Controls.Add(this.BillGroupBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form5";
-            this.Text = "Form5";
+            this.Text = "customers";
             this.Load += new System.EventHandler(this.Form5_Load);
             this.BillGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ProductsGridView)).EndInit();
@@ -228,5 +245,6 @@
         private System.Windows.Forms.Button buy_button;
         private System.Windows.Forms.TextBox TotalBillBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

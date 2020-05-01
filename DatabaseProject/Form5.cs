@@ -191,24 +191,7 @@ namespace DatabaseProject
                     ProductQuantity2 = Convert.ToInt32(Row.Cells["ProductQuantityColumn"].Value);
                 }
             }
-
-            
-                /*if (CheckProductAlreadyAdded(ProductID2))
-                {
-                ProductID3 = Convert.ToInt32(ProductsGridView.Rows[RowIndex].Cells["ProductIDColumn"].Value);
-                ProductPrice3 = Convert.ToDecimal(ProductsGridView.Rows[RowIndex].Cells["ProductPriceColumn"].Value);
-                ProductQuantity3 = Convert.ToInt32(ProductsGridView.Rows[RowIndex].Cells["ProductQuantityColumn"].Value);
-                ProductQuantity3++;
-                 }
-                else
-                {
-                ProductID4 = Convert.ToInt32(ProductsGridView.Rows[RowIndex].Cells["ProductIDColumn"].Value);
-                ProductPrice4 = Convert.ToDecimal(ProductsGridView.Rows[RowIndex].Cells["ProductPriceColumn"].Value);
-                ProductQuantity4 = Convert.ToInt32(ProductsGridView.Rows[RowIndex].Cells["ProductQuantityColumn"].Value);
-                ProductQuantity4++;
-                 }*/
-
-            
+           
 
         }
 
@@ -245,18 +228,20 @@ namespace DatabaseProject
         {
             if (e.RowIndex >= 0)
             {
-                MessageBox.Show("คุณต้องการที่จะลบหรือไม่!", " C A F É B A R", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (ProductsGridView.Columns[e.ColumnIndex].Name == "Delete")
+                if (ProductsGridView.Columns[e.ColumnIndex].Name == "DeleteColumn")
                 {
-                    int ProductID = Convert.ToInt32(ProductsGridView.Rows[e.RowIndex].Cells["id"].Value);
-                    ProductsGridView.Rows.RemoveAt((e.RowIndex));
-                }
-                else
-                {
-                    ProductsGridView.Rows.RemoveAt((e.RowIndex));
-                    MessageBox.Show("ลบสำเร็จ!", " C A F É B A R", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                    if (MessageBox.Show("คุณต้องการลบรายการนี้ หรือไม่?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        decimal DeletedProductTotal = Convert.ToDecimal(ProductsGridView.Rows[e.RowIndex].Cells["TotalPriceColumn"].Value);
 
+                        decimal CurrentTotalBill = Convert.ToDecimal(TotalBillBox.Text);
+
+                        CurrentTotalBill = CurrentTotalBill - DeletedProductTotal;
+
+                        ProductsGridView.Rows.RemoveAt(e.RowIndex);
+                        TotalBillBox.Text = CurrentTotalBill.ToString();
+                    }
+                }
             }
         }
 
@@ -301,13 +286,13 @@ namespace DatabaseProject
                 ProductID4 = 0;
                 ProductPrice4 = 0;
                 ProductQuantity4 = 0;*/
-                MessageBox.Show("ขอบคุณที่ใช้บริการค่ะ", "Cafe Name!", MessageBoxButtons.OK);
+                MessageBox.Show("ขอบคุณที่ใช้บริการค่ะ", " C A F É B A R", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TotalBillBox.Text = string.Empty;
                 ProductsGridView.Rows.Clear();
             }
              else
              {
-                 MessageBox.Show("การซื้อสินค้าล้มเหลว ขออภัยในความไม่สะดวกค่ะ", "Cafe_name!", MessageBoxButtons.OK);
+                MessageBox.Show("การซื้อสินค้าล้มเหลว ขออภัยในความไม่สะดวกค่ะ", " C A F É B A R", MessageBoxButtons.OK, MessageBoxIcon.Information);
              }
         }
 
@@ -373,53 +358,14 @@ namespace DatabaseProject
         {
 
         }
-        /* private bool RecordSale_detail3(int ProductID3, decimal ProductPrice3, int ProductQuantity3)
-{
-    DataAccess dataAccess = new DataAccess();
-    int SaleID = dataAccess.ReturnSaleID();
-    if (ProductPrice3 != 0)
-    {
-        MySqlConnection connection = new MySqlConnection(ConnectionString);
-        connection.Open();
-        MySqlTransaction sqlTran2 = connection.BeginTransaction();
-        //Enlist a command in the current transaction
-        MySqlCommand command2 = connection.CreateCommand();
-        command2.Transaction = sqlTran2;
 
-        command2.Parameters.AddWithValue("@ProductID3", ProductID3);
-        command2.Parameters.AddWithValue("@ProductPrice3", ProductPrice3);
-        command2.Parameters.AddWithValue("@ProductQuantity3", ProductQuantity3);
-        command2.Parameters.AddWithValue("@SaleID", SaleID);
-        command2.CommandText = "Insert into sale_details (SaleID,ProductID, Price, Quantity) values (@SaleID, @ProductID3, @ProductPrice3, @ProductQuantity3)";
-        command2.ExecuteNonQuery();
-        sqlTran2.Commit();
-        connection.Close();
-    }
-    return true;
-}
-private bool RecordSale_detail4(int ProductID4, decimal ProductPrice4, int ProductQuantity4)
-{
-    DataAccess dataAccess = new DataAccess();
-    int SaleID = dataAccess.ReturnSaleID();
-    if (ProductPrice4 != 0)
-    {
-        MySqlConnection connection = new MySqlConnection(ConnectionString);
-        connection.Open();
-        MySqlTransaction sqlTran3 = connection.BeginTransaction();
-        //Enlist a command in the current transaction
-        MySqlCommand command3 = connection.CreateCommand();
-        command3.Transaction = sqlTran3;
-        command3.Parameters.AddWithValue("@ProductID4", ProductID4);
-        command3.Parameters.AddWithValue("@ProductPrice4", ProductPrice4);
-        command3.Parameters.AddWithValue("@ProductQuantity4", ProductQuantity4);
-        command3.Parameters.AddWithValue("@SaleID", SaleID);
-        command3.CommandText = "Insert into sale_details (SaleID,ProductID, Price, Quantity) values (@SaleID, @ProductID4, @ProductPrice4, @ProductQuantity4)";
-        command3.ExecuteNonQuery();
-        sqlTran3.Commit();
-        connection.Close();
-    }
-    return true;
-}*/
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Form1 form1 = new Form1();
+            form1.Visible = true;
+        }
+        
     }
 }
    
